@@ -3,7 +3,7 @@
     src: mongo.repo
     dest: /etc/yum.repos.d/mongo.repo
 
-- name: Install mongodb server
+- name: install mongodb server
   ansible.builtin.dnf:
     name: mongodb-org
     state: present
@@ -14,7 +14,7 @@
     regexp: '127.0.0.1'
     replace: '0.0.0.0'
 
-- name: Enable and Start mongodb
+- name: start and enable mongodb
   ansible.builtin.service:
     name: mongod
     enabled: yes
