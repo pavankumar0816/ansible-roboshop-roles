@@ -7,4 +7,4 @@
 # 6234633934336666646237333263396465366461633932376131
 
 MYSQL_ROOT_PASSWORD: "{{ (lookup('amazon.aws.aws_secret', '/roboshop/dev/mysql_root_password', region='us-east-1') | from_json).MYSQL_ROOT_PASSWORD }}"
-#"{{ lookup('amazon.aws.aws_ssm', '/roboshop/dev/mysql_root_password', region='us-east-1', decrypt=True) }}"
+#"{{ lookup('amazon.aws.aws_ssm', '/roboshop/dev/mysql_root_password', region='us-east-1', decrypt=True) }}" => Parameter store
