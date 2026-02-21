@@ -4,7 +4,7 @@
 
 - name: set the os fact
   ansible.builtin.set_fact:
-    os: "debian
+    os: "debian"
 
 - name: message-2
   ansible.builtin.debug:
